@@ -1,0 +1,771 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  transition: all ease-out 0.3s;
+}
+
+i {
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+header {
+  display: flex;
+  height: 8vh;
+  width: 100%;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  position: fixed;
+  background: rgba(255, 255, 255, 0);
+  transition: ease-out 0.3s;
+}
+
+header i {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+nav.desktop-nav {
+  display: none;
+}
+
+nav.mobile-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 65vw;
+  height: 100%;
+  padding: 3rem 0;
+  transition: 0.3s;
+  background: #1a1e21f8;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 2;
+}
+
+.nav-toggle {
+  height: 100%;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i.fa-xmark {
+  display: none;
+}
+
+nav.mobile-nav a {
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  padding-left: 2rem;
+  font-weight: lighter;
+}
+nav.mobile-nav a:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+a.biodata-menu {
+  border-bottom: none;
+  margin-top: 2rem;
+  color: black;
+  font-weight: normal;
+  box-shadow: 0 0 0 2px #bf8c40 inset;
+  width: fit-content;
+  letter-spacing: 1px;
+  line-height: 3;
+  border-radius: 2rem;
+  align-self: center;
+  font-size: 0.8rem;
+  padding-left: 0;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.logo i {
+  color: #bf8c40;
+}
+
+.logo h1 {
+  margin-left: 0.5rem;
+  font-family: Freehand;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* -------------------- HOME -------------------- */
+
+#home {
+  padding: 0 1rem;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: #1a1e21
+    radial-gradient(at top left, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  color: rgba(255, 255, 255, 0.88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+#home .home-right {
+  display: none;
+}
+
+#home h1 {
+  font-weight: normal;
+  border-bottom: 1px solid #bf8c40;
+  padding-bottom: 5px;
+}
+
+#home h1 span {
+  color: #bf8c40;
+}
+
+#home p {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: lighter;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+#home .nilai-produk {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#home .nilai h2 {
+  font-weight: normal;
+  color: #bf8c40;
+  font-size: 2rem;
+}
+
+#home .nilai h3 {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+#home .nilai p {
+  display: none;
+}
+
+/* -------------------- TENTANG -------------------- */
+
+#tentang {
+  position: absolute;
+  top: 100vh;
+  background: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10vh 5% 0 5%;
+}
+
+.label {
+  text-align: center;
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #bf8c40;
+}
+
+article {
+  padding: 0 1rem;
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tentang-card {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.tentang-card h3 {
+  font-size: 1rem;
+}
+
+.tentang-card p {
+  font-size: 0.8rem;
+}
+
+/* -------------------- PRODUK -------------------- */
+
+#produk {
+  position: absolute;
+  top: 200vh;
+  background: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10vh 5% 0 5%;
+}
+
+.produk-card {
+  height: 22vh;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 0 5px 1px #bf8c40;
+  background: #bf8c4027;
+}
+.card i {
+  color: #bf8c40;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+.produk-teks {
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.produk-card h3 {
+  font-size: 1rem;
+}
+.produk-card p {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* -------------------- KONTAK -------------------- */
+
+#kontak {
+  position: absolute;
+  top: 300vh;
+  background: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10vh 5% 0 5%;
+}
+
+#kontak article {
+  padding: 0;
+}
+
+#kontak form {
+  width: 100%;
+  height: 70vh;
+  background: #1a1e21;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+#kontak form input,
+textarea {
+  padding: 0.5rem;
+  font-family: Poppins, sans-serif;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+#kontak form button {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-family: Poppins, sans-serif;
+  color: rgba(255, 255, 255, 0.88);
+  background: #bf8c40;
+}
+
+/* -------------------- BIODATA -------------------- */
+
+aside {
+  position: absolute;
+  top: 400vh;
+  background: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10vh 5% 0 5%;
+}
+
+.biodata {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  height: fit-content;
+  margin: auto 0;
+  color: #1a1e21;
+  text-align: center;
+}
+
+.biodata img {
+  width: 4rem;
+  border-radius: 1rem;
+}
+.biodata h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.biodata p {
+  font-size: 0.8rem;
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+  position: absolute;
+  top: 500vh;
+  height: 60vh;
+  width: 100%;
+  padding: 0 5% 0 5%;
+  background-color: #1a1e21;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer .footer-pesan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 55%;
+}
+footer .footer-pesan h3 {
+  font-weight: normal;
+  line-height: 3;
+}
+footer .footer-pesan p {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+footer .footer-pesan button {
+  padding: 0.5rem 1rem;
+  border: none;
+  box-shadow: 0 0 0 2px #bf8c40 inset;
+  background: none;
+  color: #bf8c40;
+  border-radius: 1rem;
+  width: 50%;
+}
+
+footer .footer-info {
+  display: flex;
+  height: 35%;
+  justify-content: space-between;
+}
+footer .info h3 {
+  font-size: 1rem;
+  line-height: 2;
+}
+footer .info p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+footer .info {
+  width: 45%;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+/* -------------------- DEVICE: TABLET -------------------- */
+
+@media (min-width: 768px) {
+  header,
+  #home {
+    padding: 0 10%;
+  }
+  #tentang,
+  #produk,
+  #kontak,
+  #biodata,
+  footer {
+    padding: 10vh 10% 0 10%;
+  }
+  header .logo i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  header .logo h1 {
+    font-size: 2rem;
+  }
+  header .nav-toggle i {
+    font-size: 2rem;
+  }
+  header nav a {
+    line-height: 5;
+    font-size: 1.2rem;
+    padding-left: 3rem;
+  }
+  header nav a.biodata-menu {
+    font-size: 1.2rem;
+    padding: 0 3rem;
+  }
+  #home h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  #home p {
+    font-size: 1rem;
+  }
+  #home .nilai-produk .nilai h2 {
+    font-size: 3rem;
+  }
+  #home .nilai-produk .nilai h3 {
+    font-size: 1rem;
+  }
+  #home .nilai-produk .nilai p {
+    display: block;
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+  #home .nilai-produk .nilai {
+    margin-top: 2rem;
+    width: 40%;
+  }
+  .label {
+    text-align: left;
+    padding: 0.5rem;
+    border: none;
+    border-left: 5px solid #bf8c40;
+  }
+  .tentang-card {
+    height: 25%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .tentang-card i {
+    font-size: 2rem;
+  }
+  .tentang-card h3 {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  .tentang-card p {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .produk-card {
+    background-size: cover;
+    background-position: bottom;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+  #kontak form {
+    padding: 1rem 4rem;
+    border-radius: 1.5rem;
+  }
+  #kontak form input,
+  #kontak form textarea {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+  }
+  #kontak form button {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .biodata img {
+    width: 8rem;
+  }
+  .biodata h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .biodata p {
+    font-size: 1.3rem;
+  }
+  footer h3 {
+    font-size: 2rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+  footer .footer-pesan p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  footer .footer-pesan button {
+    line-height: 2;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+  }
+  footer .footer-info {
+    margin-top: 2rem;
+  }
+  footer .info p {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------- DEVICE: SMALL DESKTOP -------------------- */
+
+@media (min-width: 1024px) {
+  header nav.mobil-nav {
+    display: none;
+  }
+  header .nav-toggle {
+    display: none;
+  }
+  header,
+  #home {
+    padding: 0 10%;
+  }
+  #tentang,
+  #produk,
+  #kontak,
+  #biodata,
+  footer {
+    padding: 10vh 10% 0 10%;
+  }
+  header nav.desktop-nav {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav.desktop-nav a {
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.88);
+    cursor: pointer;
+  }
+  header nav.desktop-nav a:nth-child(5) {
+    border: 2px solid #bf8c40;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+  header nav.desktop-nav a:nth-child(5):hover {
+    background: #bf8c40;
+    color: black;
+  }
+  header .logo h1 {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  #home h1 {
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+    font-weight: normal;
+  }
+  #home .nilai-produk {
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  #kontak form {
+    padding: 1rem 5rem;
+  }
+  #kontak form input {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  #kontak form button {
+    font-size: 1rem;
+  }
+  #biodata {
+    align-items: center;
+  }
+  #biodata h3.label {
+    align-self: flex-start;
+  }
+  .biodata {
+    width: 60%;
+  }
+  .biodata img {
+    width: 7rem;
+  }
+  .biodata h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .biodata p {
+    font-size: 1rem;
+  }
+  footer h3 {
+    font-size: 1.5rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.88);
+  }
+  footer .footer-info p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.88);
+  }
+}
+
+/* -------------------- DEVICE: SMALL DESKTOP -------------------- */
+
+@media (min-width: 1440px) {
+  header,
+  #home {
+    padding: 0 5%;
+  }
+  #tentang,
+  #produk,
+  #kontak,
+  #biodata,
+  footer {
+    padding: 10vh 5% 0 5%;
+  }
+  header nav.desktop-nav {
+    width: 40%;
+  }
+  #home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #home .home-left {
+    width: 50%;
+    padding-right: 5%;
+  }
+  #home .home-left h1 {
+    font-size: 3rem;
+  }
+  #home .home-right {
+    display: flex;
+    width: 50%;
+  }
+  #home .home-right img {
+    width: 50vw;
+  }
+  #tentang article {
+    align-items: center;
+  }
+  #tentang .tentang-card {
+    width: 60%;
+  }
+  #produk article {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #produk .produk-card {
+    width: 30%;
+    height: 50%;
+  }
+  #produk .produk-card p {
+    white-space: normal;
+    overflow: hidden;
+  }
+  #produk .produk-teks {
+    height: 3rem;
+    overflow: hidden;
+    transition: ease-out 0.3s;
+  }
+  #produk .produk-teks h3 {
+    margin-bottom: 1rem;
+  }
+  #produk .produk-card:hover > .produk-teks {
+    height: 100%;
+  }
+  #kontak article {
+    align-items: center;
+  }
+  #kontak form {
+    height: 90vh;
+    width: 60%;
+  }
+  #kontak form button:hover {
+    background: #bf8c40d7;
+  }
+  footer {
+    flex-direction: row;
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
