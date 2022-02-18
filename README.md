@@ -1,3 +1,4 @@
 # kopi-web
-Simple responsive landing page
-view here: https://kopi-aceh.netlify.app/
+Simple responsive landing page with coffee theme
+
+take a look here: https://kopi-aceh.netlify.app/
