@@ -1,2 +1,2 @@
 # kopi-web
-Simplel responsive landing page
+Simple responsive landing page
